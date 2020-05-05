@@ -16,13 +16,31 @@ Widget build(BuildContext context) {
 home: Scaffold(
   
   appBar: AppBar(
+    backgroundColor: Colors.white,
     
-title: Text(
-"Work in a Profile",
+title: Text("User Profile",
+style: TextStyle(color: Colors.black),
+
+
+
 
 ),
+),
+body: Column(
+  children: <Widget>[
+    Container(
+      height:  200,
+decoration: BoxDecoration(
+image: DecorationImage(
+            image:AssetImage('assets/cre2.jpg')
 
   ),
+
+),
+    ),
+  ],
+),
+
 ),
 
   );
