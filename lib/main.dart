@@ -16,7 +16,9 @@ Widget build(BuildContext context) {
 home: Scaffold(
   
   appBar: AppBar(
+    centerTitle: true,
     backgroundColor: Colors.white,
+    
     
 title: Text("User Profile",
 style: TextStyle(color: Colors.black),
