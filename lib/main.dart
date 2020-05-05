@@ -16,17 +16,29 @@ Widget build(BuildContext context) {
 home: Scaffold(
   
   appBar: AppBar(
+    
     centerTitle: true,
     backgroundColor: Colors.white,
-    
-    
-title: Text("User Profile",
+    elevation: 0.0,
+    title: Text("User Profile",
+
 style: TextStyle(color: Colors.black),
+), 
+   
+    
+        actions: <Widget>[
+          FlatButton.icon(
+            
+            icon: Icon(Icons.menu,
+            color: Colors.black,
+            ),
+            label: Text(''),
+            
+            
+            //onPressed: () => widget.toggleView(),
+          ),]
+  
 
-
-
-
-),
 ),
 body: Column(
   children: <Widget>[
