@@ -41,16 +41,31 @@ style: TextStyle(color: Colors.black),
 
 ),
 body: Column(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
   children: <Widget>[
     Container(
-      height:  200,
+      height:  200,  
 decoration: BoxDecoration(
 image: DecorationImage(
-            image:AssetImage('assets/cre2.jpg')
+            image:AssetImage('assets/cre2.jpg'),
+           fit: BoxFit.cover,
 
   ),
 
 ),
+child: Column(
+  children: <Widget>[
+    Container(
+      width: 100,
+      height: 100,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+          image: AssetImage('assets/user.png'),
+          fit: BoxFit.cover,
+          ),
+        ),
+    ),
+  ],),
     ),
   ],
 ),
