@@ -45,6 +45,7 @@ body: Column(
   children: <Widget>[
     Container(
       height:  200,  
+      padding: EdgeInsets.only(bottom: 15),
 decoration: BoxDecoration(
 image: DecorationImage(
             image:AssetImage('assets/cre2.jpg'),
@@ -54,6 +55,7 @@ image: DecorationImage(
 
 ),
 child: Column(
+  mainAxisAlignment: MainAxisAlignment.end,
   children: <Widget>[
     Container(
       width: 100,
@@ -64,6 +66,11 @@ child: Column(
           fit: BoxFit.cover,
           ),
         ),
+    ),
+    Text(
+'Leah Castro',
+style: TextStyle(
+  color: Colors.black ),
     ),
   ],),
     ),
