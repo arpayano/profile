@@ -35,15 +35,15 @@ style: TextStyle(color: Colors.black),
             label: Text(''),
             
             
-            //onPressed: () => widget.toggleView(),
+            //onPressed: (),
           ),]
   
 
 ),
 body: Column(
   crossAxisAlignment: CrossAxisAlignment.stretch,
-  children: <Widget>[
-    Container(
+  children: <Widget>[ 
+     Container(
       height:  200,  
       padding: EdgeInsets.only(bottom: 15),
 decoration: BoxDecoration(
@@ -55,20 +55,15 @@ image: DecorationImage(
 
 ),
 child: Column(
-  mainAxisAlignment: MainAxisAlignment.end,
+  mainAxisAlignment: MainAxisAlignment.start,
   children: <Widget>[
-    Container(
-      width: 100,
-      height: 100,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-          image: AssetImage('assets/user.png'),
-          fit: BoxFit.cover,
-          ),
-        ),
-    ),
+    UserPhoto(assetImage: 'assets/user.png',  //v2 ap
+     size:70,
+     
+     ),                                                                //User photo Widget.  AP
     Text(
 'Leah Castro',
+
 style: TextStyle(
   color: Colors.black ),
     ),
@@ -82,4 +77,35 @@ style: TextStyle(
   );
 }
 
+}
+// i created this widget from  the code line before then i need to add two parametor  the first is assetImage and the other is the size. AP
+class UserPhoto extends StatelessWidget {                                         //User photo code block. ap.
+final String assetImage;
+final double size;
+
+  const UserPhoto({
+    Key key,
+    @required this.assetImage, 
+    this.size=100, //  interesante se pedira como requerido pero es un parametro nombrado. ap
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: this.size,    //v2 Ap
+      height: this.size,   //v2 ap
+      decoration: BoxDecoration(
+          image: DecorationImage(
+          image: AssetImage(this.assetImage), //  i sent the parameter. ap
+          fit: BoxFit.cover,
+          ),
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Colors.white,
+            width: 4,
+            )
+        ),
+        margin: EdgeInsets.only(bottom: 5), 
+    );
+  }
 }
