@@ -43,32 +43,13 @@ style: TextStyle(color: Colors.black),
 body: Column(
   crossAxisAlignment: CrossAxisAlignment.stretch,
   children: <Widget>[ 
-     Container(
-      height:  200,  
-      padding: EdgeInsets.only(bottom: 15),
-decoration: BoxDecoration(
-image: DecorationImage(
-            image:AssetImage('assets/cre2.jpg'),
-           fit: BoxFit.cover,
+     Header(
+       height: 200, 
+       userName: 'Leah Castro',
+       backgroundAsset: 'assets/man.jpg',
+       userAsset: 'assets/user.png',
 
-  ),
-
-),
-child: Column(
-  mainAxisAlignment: MainAxisAlignment.start,
-  children: <Widget>[
-    UserPhoto(assetImage: 'assets/user.png',  //v2 ap
-     size:70,
-     
-     ),                                                                //User photo Widget.  AP
-    Text(
-'Leah Castro',
-
-style: TextStyle(
-  color: Colors.black ),
-    ),
-  ],),
-    ),
+     ),
   ],
 ),
 
@@ -77,6 +58,52 @@ style: TextStyle(
   );
 }
 
+}
+
+class Header extends StatelessWidget {
+  final double height;                                    //v3 ap
+  final String backgroundAsset;
+  final String userAsset;
+  final String userName;
+
+
+  const Header({
+    Key key,
+    this.height=200, 
+    @required this.backgroundAsset,
+    @required this.userAsset,
+    @required this.userName,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+     height: this.height,  
+     padding: EdgeInsets.only(bottom: 15),
+decoration: BoxDecoration(
+image: DecorationImage(
+           image:AssetImage(this.backgroundAsset),                   //v3 ap
+          fit: BoxFit.cover,
+
+  ),
+
+),
+child: Column(
+  mainAxisAlignment: MainAxisAlignment.start,
+  children: <Widget>[
+    UserPhoto(assetImage: this.userName,  //v3.ap
+    size:70,
+    
+    ),                                                                //User photo Widget.  AP
+    Text(  
+'@${this.userName}',
+
+style: TextStyle(
+  color: Colors.black ),
+    ),
+  ],),
+    );
+  }
 }
 // i created this widget from  the code line before then i need to add two parametor  the first is assetImage and the other is the size. AP
 class UserPhoto extends StatelessWidget {                                         //User photo code block. ap.
