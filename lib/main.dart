@@ -53,7 +53,7 @@ body: Column(
 
 Container(
 
-  color: Color.fromARGB(80, 0, 400, 0),
+  color: Color.fromARGB(00, 0, 400, 0),
   padding: EdgeInsets.symmetric(vertical: 10),
   child:   Row (
   
@@ -85,7 +85,7 @@ Container(
 
 Container(
 
-  color: Color.fromARGB(80, 0, 400, 0),
+  color: Color.fromARGB(00, 0, 400, 0),
   padding: EdgeInsets.symmetric(vertical: 10),
   child:   Row (
   
@@ -162,6 +162,28 @@ fit: BoxFit.cover,
 
 
 ),
+// buttom panel
+
+Container(
+height: 50,
+  color: Color.fromARGB(00, 0, 400, 0),  //80, 0, 400, 0
+  padding: EdgeInsets.symmetric(vertical: 10),
+  child:   Row (
+  
+    //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  
+    children:  <Widget>[
+  
+FlatButton.icon(onPressed: (){}, icon: Icon(Icons.map), label: Text(''),),
+FlatButton.icon(onPressed: (){}, icon: Icon(Icons.edit), label: Text(''),),
+FlatButton.icon(onPressed: (){}, icon: Icon(Icons.check_circle), label: Text(''),),
+FlatButton.icon(onPressed: (){}, icon: Icon(Icons.smartphone), label: Text(''),),
+
+             
+  ],),
+),
+
+
 
   ],
 ),
