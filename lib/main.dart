@@ -35,7 +35,7 @@ style: TextStyle(color: Colors.black),
             label: Text(''),
             
             
-            //onPressed: (),
+            onPressed: (){},
           ),]
   
 
@@ -46,10 +46,123 @@ body: Column(
      Header(
        height: 200, 
        userName: 'Leah Castro',
-       backgroundAsset: 'assets/man.jpg',
+       backgroundAsset: 'assets/cre2.jpg',
        userAsset: 'assets/user.png',
 
      ),
+
+Container(
+
+  color: Color.fromARGB(80, 0, 400, 0),
+  padding: EdgeInsets.symmetric(vertical: 10),
+  child:   Row (
+  
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  
+    children: <Widget>[
+  
+      Column(children: <Widget>[Text('Quest'), Text('500'), ],),
+  
+      Column(children: <Widget>[Text('Fallowers'), Text('900'),],),
+  
+      Column(children: <Widget>[Text('Fallowing '), Text('1200'), ],),
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ],),
+),
+//PAYANO COMIENZA NUEVAMENTE A METER MANO EL 11 DE MAYO GRACIAS A DIOS POR TODO
+
+Container(
+
+  color: Color.fromARGB(80, 0, 400, 0),
+  padding: EdgeInsets.symmetric(vertical: 10),
+  child:   Row (
+  
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  
+    children: <Widget>[
+  
+RaisedButton.icon(onPressed: (){}, icon: Icon(Icons.add_circle), label: Text('Follow'),),
+
+     /* actions: <Widget>[
+          FlatButton.icon(
+            
+            icon: Icon(Icons.menu,
+            color: Colors.black,
+            ),
+            label: Text(''),
+            
+            
+            //onPressed: (),
+          ),]*/
+
+    //Column(children: <Widget>[Text('    '),],),
+  
+     // Column(children: <Widget>[Text('+Follow'),],),
+  
+ //     Column(children: <Widget>[Text('     '),  ],),
+
+        
+  ],),
+),
+// los pequeños displays Rep. Dominicana
+Container(
+height: 120,
+decoration: BoxDecoration(
+  image: DecorationImage(
+image: AssetImage('assets/display01.jpg'),
+fit: BoxFit.cover, 
+
+  ),
+
+),
+
+
+),
+///////////////// i want to put egypt lol jejejjejeje
+
+
+Container(
+height: 120,
+decoration: BoxDecoration(
+  image: DecorationImage(
+image: AssetImage('assets/display02.jpg'),
+fit: BoxFit.cover, 
+
+  ),
+
+),
+
+
+),
+
+/////////////////////////// i want to put other place waja waja waja 
+
+Container(
+height: 120,
+decoration: BoxDecoration(
+  image: DecorationImage(
+image: AssetImage('assets/display04.jpg'),
+fit: BoxFit.cover, 
+
+  ),
+
+),
+
+
+),
+
   ],
 ),
 
@@ -69,7 +182,7 @@ class Header extends StatelessWidget {
 
   const Header({
     Key key,
-    this.height=200, 
+    this.height, 
     @required this.backgroundAsset,
     @required this.userAsset,
     @required this.userName,
@@ -79,20 +192,21 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
      height: this.height,  
-     padding: EdgeInsets.only(bottom: 15),
+     padding: EdgeInsets.only(bottom: 10),
 decoration: BoxDecoration(
-image: DecorationImage(
-           image:AssetImage(this.backgroundAsset),                   //v3 ap
+          image: DecorationImage(
+          image:AssetImage(this.backgroundAsset),                   //v3 ap
           fit: BoxFit.cover,
-
   ),
 
 ),
+
 child: Column(
   mainAxisAlignment: MainAxisAlignment.start,
   children: <Widget>[
-    UserPhoto(assetImage: this.userName,  //v3.ap
-    size:70,
+    UserPhoto(
+      assetImage: this.userAsset,  //v3.ap             //aqui tenia el puto error tenia el puto userName y es el puto userAsset que va.  ap.
+    size:100,
     
     ),                                                                //User photo Widget.  AP
     Text(  

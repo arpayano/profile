@@ -45,6 +45,10 @@ flutter:
   assets:
     - assets/user.png
     - assets/cre2.jpg
+    - assets/display01.jpg
+    - assets/display02.jpg
+    - assets/display03.jpg
+    - assets/display04.jpg
     
 
 
